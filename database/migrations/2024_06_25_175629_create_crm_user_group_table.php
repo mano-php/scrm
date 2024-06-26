@@ -5,8 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -25,14 +24,50 @@ return new class extends Migration
             $table->softDeletes();
         });
 
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (1, '新会员', 1, '入会时间小于等于3天', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (2, '老会员', 1, '入会时间大于3天', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (3, '本月入会周年', 1, '入会时间是本月月份的会员', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (4, '下月入会周年', 1, '入会时间是下月月份的会员', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (5, '生日当天客户', 1, '生日是当天的客户', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (6, '本周生日客户', 1, '生日是本周（自然周）的客户', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (7, '本月生日客户', 1, '生日是本月（自然月）的客户', NULL, NULL, NULL, NULL);");
-        DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (8, '下月生日客户', 1, '生日是下个月的客户', NULL, NULL, NULL, NULL);");
+        \Mano\Crm\Models\CrmUserGroup::insert([
+            [
+                'name' => '新会员',
+                'remark' => '入会时间小于等于3天',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '老会员',
+                'remark' => '入会时间大于3天',
+                'ext_params' => json_encode([]),
+            ],
+
+            [
+                'name' => '本月入会周年',
+                'remark' => '入会时间是本月月份的会员',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '下月入会周年',
+                'remark' => '入会时间是下月月份的会员',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '生日当天客户   ',
+                'remark' => '生日是当天的客户',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '本周生日客户',
+                'remark' => '生日是本周（自然周）的客户',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '本月生日客户',
+                'remark' => '生日是本月（自然月）的客户',
+                'ext_params' => json_encode([]),
+            ],
+            [
+                'name' => '下月生日客户',
+                'remark' => '生日是下个月的客户',
+                'ext_params' => json_encode([]),
+            ]
+        ]);
+
     }
 
     /**
