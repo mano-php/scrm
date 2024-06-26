@@ -1,16 +1,16 @@
 {
-    "name": "mano/crm",
+    "name": "mano-code/crm",
     "alias": "",
     "description": "Description...",
     "type": "library",
     "version": "1.0.0",
-    "keywords": ["owl-admin", "extension"],
-    "homepage": "https://github.com/mano/crm",
+    "keywords": ["extension"],
+    "homepage": "https://github.com/mano-php/scrm",
     "license": "MIT",
     "authors": [
         {
-            "name": "your name",
-            "email": "your email"
+            "name": "Mano",
+            "email": "Mano@qq.com"
         }
     ],
     "require": {
