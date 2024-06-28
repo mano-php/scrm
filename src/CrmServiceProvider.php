@@ -11,7 +11,7 @@ class CrmServiceProvider extends ServiceProvider
     protected $menu = [
         [
             'parent' => 0,
-            'title' => 'crm管理',
+            'title' => '客户管理',
             'url' => '/crm',
             'url_type' => '1',
             'keep_alive' => '1',
@@ -19,7 +19,7 @@ class CrmServiceProvider extends ServiceProvider
         ],
         [
             'parent' => 'crm管理', // 此处父级菜单根据 title 查找
-            'title' => '客户管理',
+            'title' => '客户列表',
             'url' => '/crm_user',
             'url_type' => '1',
             'icon' => 'material-symbols-light:corporate-fare',

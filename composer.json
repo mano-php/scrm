@@ -3,7 +3,7 @@
     "alias": "客户管理模块",
     "description": "管理客户信息、标签、分类",
     "type": "library",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": ["extension"],
     "homepage": "https://github.com/mano-php/scrm",
     "license": "MIT",
