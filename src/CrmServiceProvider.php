@@ -18,21 +18,28 @@ class CrmServiceProvider extends ServiceProvider
             'icon' => 'clarity:employee-line',
         ],
         [
-            'parent' => 'crm管理', // 此处父级菜单根据 title 查找
+            'parent' => '客户管理', // 此处父级菜单根据 title 查找
             'title' => '客户列表',
             'url' => '/crm_user',
             'url_type' => '1',
             'icon' => 'material-symbols-light:corporate-fare',
         ],
         [
-            'parent' => 'crm管理', // 此处父级菜单根据 title 查找
+            'parent' => '客户管理', // 此处父级菜单根据 title 查找
             'title' => '客户标签',
             'url' => '/crm_label_group',
             'url_type' => '1',
             'icon' => 'clarity:employee-group-line',
         ],
         [
-            'parent' => 'crm管理', // 此处父级菜单根据 title 查找
+            'parent' => '客户管理', // 此处父级菜单根据 title 查找
+            'title' => '收货地址',
+            'url' => '/address_manager',
+            'url_type' => '1',
+            'icon' => 'clarity:employee-group-line',
+        ],
+        [
+            'parent' => '客户管理', // 此处父级菜单根据 title 查找
             'title' => '人群管理',
             'url' => '/crm_user_group',
             'url_type' => '1',
@@ -51,6 +58,10 @@ class CrmServiceProvider extends ServiceProvider
         DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (6, '本周生日客户', 1, '生日是本周（自然周）的客户', NULL, NULL, NULL, NULL);");
         DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (7, '本月生日客户', 1, '生日是本月（自然月）的客户', NULL, NULL, NULL, NULL);");
         DB::query("INSERT INTO `crm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (8, '下月生日客户', 1, '生日是下个月的客户', NULL, NULL, NULL, NULL);");
+    }
+    public function loadRoute()
+    {
+        include_once(__DIR__.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'api_routes.php');
     }
 
 	public function settingForm()

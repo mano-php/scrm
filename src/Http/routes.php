@@ -23,3 +23,6 @@ Route::resource('crm_label', \Mano\Crm\Http\Controllers\CrmLabelController::clas
 
 // 客户系统分群
 Route::resource('crm_user_group', \Mano\Crm\Http\Controllers\CrmUserGroupController::class);
+
+// 客户收货地址
+Route::resource('address_manager', \Mano\Crm\Http\Controllers\MemberAddresController::class);
