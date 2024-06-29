@@ -93,7 +93,7 @@ class CrmUserController extends AdminController
 	{
 		return $this->baseForm()->body([
             amis()->TextControl('nickname', '昵称'),
-            amis()->ImageControl('avatar', '头像')->receiver($this->uploadImagePath())->required(true),
+            ManoImageControl('avatar','头像'),
             amis()->DateControl('luck_date', '生日'),
             amis()->SelectControl('sex', '性别')->options(CrmUserService::SEX_TYPE),
 			amis()->TextControl('mobile', '客户手机号'),
