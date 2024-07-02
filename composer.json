@@ -3,7 +3,7 @@
     "alias": "客户管理模块",
     "description": "客户管理模块",
     "type": "library",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "keywords": [
         "extension"
     ],
