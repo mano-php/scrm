@@ -1,9 +1,9 @@
 <?php
 
-namespace Mano\Crm\Http\Controllers;
+namespace ManoCode\Scrm\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Mano\Crm\Models\MemberAddres;
+use ManoCode\Scrm\Models\MemberAddres;
 use ManoCode\MiniWechat\Traits\ApiResponseTrait;
 
 /**

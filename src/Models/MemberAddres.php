@@ -1,6 +1,6 @@
 <?php
 
-namespace Mano\Crm\Models;
+namespace ManoCode\Scrm\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Slowlyo\OwlAdmin\Models\BaseModel as Model;

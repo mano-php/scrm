@@ -1,10 +1,10 @@
 <?php
 
-namespace Mano\Crm\Services;
+namespace ManoCode\Scrm\Services;
 
 use Illuminate\Database\Eloquent\Model;
-use Mano\Crm\Models\MemberAddres;
-use Mano\Crm\Models\CrmUser;
+use ManoCode\Scrm\Models\MemberAddres;
+use ManoCode\Scrm\Models\ScrmUser;
 use Slowlyo\OwlAdmin\Services\AdminService;
 
 /**
@@ -70,7 +70,7 @@ class MemberAddresService extends AdminService
         $items = $list->items();
         $total = $list->total();
         foreach ($items as $key=>$item){
-            if($member = CrmUser::query()->where(['id'=>$item['user_id']])->first()){
+            if($member = ScrmUser::query()->where(['id'=>$item['user_id']])->first()){
                 if(strlen($member->getAttribute('nickname'))>=1) {
                     $items[$key]['user_info'] = "{$member->getAttribute('nickname')}-{$member->getAttribute('mobile')}";
                 }else{

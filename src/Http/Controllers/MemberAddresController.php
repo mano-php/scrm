@@ -4,8 +4,8 @@ namespace Mano\Crm\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Mano\Crm\Models\CrmUser;
-use Mano\Crm\Services\MemberAddresService;
+use ManoCode\Scrm\Models\ScrmUser;
+use ManoCode\Scrm\Services\MemberAddresService;
 use Slowlyo\OwlAdmin\Controllers\AdminController;
 use Slowlyo\OwlAdmin\Renderers\Form;
 use Slowlyo\OwlAdmin\Renderers\Page;
@@ -20,7 +20,7 @@ class MemberAddresController extends AdminController
     protected string $serviceName = MemberAddresService::class;
     public function getMember(Request $request): \Illuminate\Http\JsonResponse
     {
-        $query = CrmUser::query();
+        $query = ScrmUser::query();
         if(strlen(strval($request->input('term')))>=1){
             $query->where(function($where) use($request){
                 $where->where('mobile','like',"%{$request->input('term')}%")->orWhere('nickname','like',"%{$request->input('term')}%");
