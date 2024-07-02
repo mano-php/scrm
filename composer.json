@@ -1,33 +1,33 @@
 {
-    "name": "mano-code/scrm",
-    "alias": "客户管理模块",
-    "description": "管理客户信息、标签、分类",
+    "name": "mano/scrm",
+    "alias": "",
+    "description": "Description...",
     "type": "library",
-    "version": "1.0.4",
-    "keywords": ["extension"],
-    "homepage": "https://github.com/mano-php/scrm",
+    "version": "1.0.0",
+    "keywords": ["owl-admin", "extension"],
+    "homepage": "https://github.com/mano/scrm",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mano",
-            "email": "Mano@qq.com"
+            "name": "your name",
+            "email": "your email"
         }
     ],
     "require": {
         "php": ">=8.0",
         "slowlyo/owl-admin": "*",
-        "mano-code/filesystem": "*"
+        "mano-code/filesystem": "dev-main"
     },
     "autoload": {
         "psr-4": {
-            "Mano\\Crm\\": "src/"
+            "Mano\\Scrm\\": "src/"
         }
     },
     "extra": {
-        "owl-admin": "Mano\\Crm\\CrmServiceProvider",
+        "owl-admin": "Mano\\Scrm\\ScrmServiceProvider",
         "laravel": {
             "providers": [
-                "Mano\\Crm\\CrmServiceProvider"
+                "Mano\\Scrm\\ScrmServiceProvider"
             ]
         }
     }

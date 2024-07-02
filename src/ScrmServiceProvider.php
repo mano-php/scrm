@@ -1,16 +1,47 @@
 <?php
 
-namespace Mano\Scrm\Database\Seeders;
+namespace Mano\Scrm;
 
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Slowlyo\OwlAdmin\Renderers\TextControl;
+use Slowlyo\OwlAdmin\Extend\ServiceProvider;
 
-class CrmUserGroupSeeder extends Seeder
+class ScrmServiceProvider extends ServiceProvider
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
+    protected $menu = [
+        [
+            'parent' => 0,
+            'title' => 'scrm管理',
+            'url' => '/scrm',
+            'url_type' => '1',
+            'keep_alive' => '1',
+            'icon' => 'clarity:employee-line',
+        ],
+        [
+            'parent' => 'scrm管理', // 此处父级菜单根据 title 查找
+            'title' => '客户管理',
+            'url' => '/scrm_user',
+            'url_type' => '1',
+            'icon' => 'material-symbols-light:corporate-fare',
+        ],
+        [
+            'parent' => 'scrm管理', // 此处父级菜单根据 title 查找
+            'title' => '客户标签',
+            'url' => '/scrm_label_group',
+            'url_type' => '1',
+            'icon' => 'clarity:employee-group-line',
+        ],
+        [
+            'parent' => 'scrm管理', // 此处父级菜单根据 title 查找
+            'title' => '人群管理',
+            'url' => '/scrm_user_group',
+            'url_type' => '1',
+            'icon' => 'clarity:employee-group-line',
+        ],
+    ];
+
+
+    public function install()
     {
         DB::query("INSERT INTO `scrm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (1, '新会员', 1, '入会时间小于等于3天', NULL, NULL, NULL, NULL);");
         DB::query("INSERT INTO `scrm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (2, '老会员', 1, '入会时间大于3天', NULL, NULL, NULL, NULL);");
@@ -21,4 +52,11 @@ class CrmUserGroupSeeder extends Seeder
         DB::query("INSERT INTO `scrm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (7, '本月生日客户', 1, '生日是本月（自然月）的客户', NULL, NULL, NULL, NULL);");
         DB::query("INSERT INTO `scrm_user_group` (`id`, `name`, `up_type`, `remark`, `ext_params`, `created_at`, `updated_at`, `deleted_at`) VALUES (8, '下月生日客户', 1, '生日是下个月的客户', NULL, NULL, NULL, NULL);");
     }
+
+	public function settingForm()
+	{
+	    return $this->baseSettingForm()->body([
+            TextControl::make()->name('value')->label('Value')->required(true),
+	    ]);
+	}
 }
