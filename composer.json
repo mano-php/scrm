@@ -1,10 +1,12 @@
 {
     "name": "mano-code/scrm",
-    "alias": "",
-    "description": "Description...",
+    "alias": "客户管理模块",
+    "description": "客户管理模块",
     "type": "library",
-    "version": "1.0.9",
-    "keywords": ["extension"],
+    "version": "1.1.0",
+    "keywords": [
+        "extension"
+    ],
     "homepage": "https://github.com/mano/scrm",
     "license": "MIT",
     "authors": [
@@ -16,7 +18,7 @@
     "require": {
         "php": ">=8.0",
         "slowlyo/owl-admin": "*",
-        "mano-code/filesystem": "dev-main"
+        "mano-code/filesystem": "*"
     },
     "autoload": {
         "psr-4": {
