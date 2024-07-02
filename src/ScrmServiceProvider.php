@@ -1,6 +1,6 @@
 <?php
 
-namespace Mano\Scrm;
+namespace ManoCode\Scrm;
 
 use Illuminate\Support\Facades\DB;
 use Slowlyo\OwlAdmin\Renderers\TextControl;

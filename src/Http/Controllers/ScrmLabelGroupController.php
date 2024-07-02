@@ -1,11 +1,11 @@
 <?php
 
-namespace Mano\Scrm\Http\Controllers;
+namespace ManoCode\Scrm\Http\Controllers;
 
 use Illuminate\Support\Arr;
-use Mano\Scrm\Models\ScrmLabel;
-use Mano\Scrm\Models\ScrmLabelGroup;
-use Mano\Scrm\Services\ScrmLabelGroupService;
+use ManoCode\Scrm\Models\ScrmLabel;
+use ManoCode\Scrm\Models\ScrmLabelGroup;
+use ManoCode\Scrm\Services\ScrmLabelGroupService;
 use Slowlyo\OwlAdmin\Controllers\AdminController;
 
 /**

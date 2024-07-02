@@ -3,7 +3,7 @@
     "alias": "",
     "description": "Description...",
     "type": "library",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "keywords": ["extension"],
     "homepage": "https://github.com/mano/scrm",
     "license": "MIT",
@@ -20,14 +20,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Mano\\Scrm\\": "src/"
+            "ManoCode\\Scrm\\": "src/"
         }
     },
     "extra": {
-        "owl-admin": "Mano\\Scrm\\ScrmServiceProvider",
+        "owl-admin": "ManoCode\\Scrm\\ScrmServiceProvider",
         "laravel": {
             "providers": [
-                "Mano\\Scrm\\ScrmServiceProvider"
+                "ManoCode\\Scrm\\ScrmServiceProvider"
             ]
         }
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Mano\Scrm\Services;
+namespace ManoCode\Scrm\Services;
 
-use Mano\Scrm\Models\ScrmLabel;
-use Mano\Scrm\Models\ScrmLabelGroup;
+use ManoCode\Scrm\Models\ScrmLabel;
+use ManoCode\Scrm\Models\ScrmLabelGroup;
 use Slowlyo\OwlAdmin\Services\AdminService;
 
 /**

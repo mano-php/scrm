@@ -1,8 +1,8 @@
 <?php
 
-namespace Mano\Scrm\Http\Controllers;
+namespace ManoCode\Scrm\Http\Controllers;
 
-use Mano\Scrm\Services\ScrmLabelService;
+use ManoCode\Scrm\Services\ScrmLabelService;
 use Slowlyo\OwlAdmin\Controllers\AdminController;
 
 /**

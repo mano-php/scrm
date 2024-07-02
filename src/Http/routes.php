@@ -1,9 +1,9 @@
 <?php
 
-use Mano\Scrm\Http\Controllers;
+use ManoCode\Scrm\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use Mano\Scrm\Http\Controllers\ScrmLabelGroupController;
-use Mano\Scrm\Http\Controllers\ScrmUserController;
+use ManoCode\Scrm\Http\Controllers\ScrmLabelGroupController;
+use ManoCode\Scrm\Http\Controllers\ScrmUserController;
 
 Route::get('scrm', [Controllers\ScrmController::class, 'index']);
 // 客户管理
@@ -19,7 +19,7 @@ Route::get('/scrm_label_group_api/labelgroup-lists',[ScrmLabelGroupController::c
 Route::get('/scrm_label_group_api/labelgroup_lists_tree',[ScrmLabelGroupController::class,'getLabelGroupListsTree']);
 
 // 客户标签
-Route::resource('scrm_label', \Mano\Scrm\Http\Controllers\ScrmLabelController::class);
+Route::resource('scrm_label', \ManoCode\Scrm\Http\Controllers\ScrmLabelController::class);
 
 // 客户系统分群
-Route::resource('scrm_user_group', \Mano\Scrm\Http\Controllers\ScrmUserGroupController::class);
+Route::resource('scrm_user_group', \ManoCode\Scrm\Http\Controllers\ScrmUserGroupController::class);

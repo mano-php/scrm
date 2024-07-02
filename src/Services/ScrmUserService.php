@@ -1,10 +1,10 @@
 <?php
 
-namespace Mano\Scrm\Services;
+namespace ManoCode\Scrm\Services;
 
-use Mano\Scrm\Models\ScrmUser;
-use Mano\Scrm\Models\ScrmUserGroup;
-use Mano\Scrm\Models\ScrmUserLabel;
+use ManoCode\Scrm\Models\ScrmUser;
+use ManoCode\Scrm\Models\ScrmUserGroup;
+use ManoCode\Scrm\Models\ScrmUserLabel;
 use Slowlyo\OwlAdmin\Services\AdminService;
 
 /**

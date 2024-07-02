@@ -24,7 +24,7 @@ return new class extends Migration {
             $table->softDeletes();
         });
 
-        \Mano\Scrm\Models\ScrmUserGroup::insert([
+        \ManoCode\Scrm\Models\ScrmUserGroup::insert([
             [
                 'name' => '新会员',
                 'remark' => '入会时间小于等于3天',

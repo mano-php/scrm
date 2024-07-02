@@ -1,10 +1,10 @@
 <?php
 
-namespace Mano\Scrm\Http\Controllers;
+namespace ManoCode\Scrm\Http\Controllers;
 
-use Mano\Scrm\Models\ScrmLabelGroup;
-use Mano\Scrm\Models\ScrmUserGroup;
-use Mano\Scrm\Services\ScrmUserService;
+use ManoCode\Scrm\Models\ScrmLabelGroup;
+use ManoCode\Scrm\Models\ScrmUserGroup;
+use ManoCode\Scrm\Services\ScrmUserService;
 use Slowlyo\OwlAdmin\Controllers\AdminController;
 use Slowlyo\OwlAdmin\Renderers\SelectControl;
 use Slowlyo\OwlAdmin\Renderers\TextControl;
