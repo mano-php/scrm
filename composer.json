@@ -1,16 +1,16 @@
 {
-    "name": "mano/scrm",
+    "name": "mano-code/scrm",
     "alias": "",
     "description": "Description...",
     "type": "library",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "keywords": ["extension"],
     "homepage": "https://github.com/mano/scrm",
     "license": "MIT",
     "authors": [
         {
-            "name": "your name",
-            "email": "your email"
+            "name": "Mano",
+            "email": "mano@qq.com"
         }
     ],
     "require": {
