@@ -1,6 +1,6 @@
 <?php
 
-namespace Mano\Crm\Http\Controllers;
+namespace ManoCode\Scrm\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
